@@ -1,0 +1,27 @@
+services:
+  nginx:
+    image: nginx:alpine
+    container_name: web-nginx
+    ports:
+      - "8888:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ../webroot/static:/usr/share/nginx/html:ro
+      - ../webroot/uploads:/usr/share/nginx/html/uploads:ro
+    depends_on:
+      - python
+    restart: unless-stopped
+
+  python:
+    build:
+      context: ./python
+      dockerfile: Dockerfile
+    container_name: web-python
+    volumes:
+      - ./python/app.py:/app/app.py:ro
+      - ../webroot:/app/webroot:rw
+      - ../webroot/dynamic/routes:/app/routes:ro
+    environment:
+      - FLASK_ENV=production
+      - TOKENS_FILE=/app/webroot/tokens.json
+    restart: unless-stopped
