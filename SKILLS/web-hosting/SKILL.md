@@ -1,3 +1,8 @@
+---
+name: web-hosting
+description: Web page hosting for OpenClaw. Support static HTML and dynamic Flask pages with secure token validation.
+---
+
 # Web Hosting Skill
 
 为 OpenClaw 提供 Web 页面托管能力，支持静态页面和动态页面（Python Flask）。
