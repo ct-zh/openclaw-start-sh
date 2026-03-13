@@ -1,16 +1,24 @@
 # USER.md - About Your Human
 
-_Learn about the person you're helping. Update this as you go._
-
-- **Name:**
-- **What to call them:**
-- **Pronouns:** _(optional)_
-- **Timezone:**
+- **Name:** 曹庭
+- **What to call them:** 曹庭
+- **Timezone:** Asia/Shanghai (GMT+8)
 - **Notes:**
+
+## 专业背景
+
+- **职业：** 资深软件研发工程师
+- **经验：** 10年软件开发经验
+- **技术栈：** 待补充
+
+## 兴趣方向
+
+- AI 副业探索（自媒体、软件产品等）
+- OpenClaw 使用与定制
 
 ## Context
 
-_(What do they care about? What projects are they working on? What annoys them? What makes them laugh? Build this over time.)_
+2026年3月开始探索使用大模型做副业，关注自媒体和软件产品方向。
 
 ---
 
