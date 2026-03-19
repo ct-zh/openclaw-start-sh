@@ -1284,3 +1284,24 @@ To github.com:ct-zh/openclaw-start-sh.git
 [2026-03-19 21:00:01] 已同步: memory/*.md
 [2026-03-19 21:00:01] 同步完成
 [2026-03-19 21:00:01] 检测到未提交的修改，开始提交...
+[master 876efd6] chore: sync workspace prompts - 2026-03-19 21:00:01
+ 1 file changed, 21 insertions(+)
+[2026-03-19 21:00:01] 已创建 commit: chore: sync workspace prompts - 2026-03-19 21:00:01
+error: src refspec main does not match any
+error: failed to push some refs to 'github.com:ct-zh/openclaw-start-sh.git'
+To github.com:ct-zh/openclaw-start-sh.git
+   08f9da0..876efd6  master -> master
+[2026-03-19 21:00:05] 推送成功
+[2026-03-19 21:00:05] 同步脚本执行完成
+[2026-03-20 00:00:01] 开始同步提示词文件...
+[2026-03-20 00:00:01] 已同步: AGENTS.md
+[2026-03-20 00:00:01] 已同步: BOOTSTRAP.md
+[2026-03-20 00:00:01] 已同步: HEARTBEAT.md
+[2026-03-20 00:00:01] 已同步: IDENTITY.md
+[2026-03-20 00:00:01] 已同步: MEMORY.md
+[2026-03-20 00:00:01] 已同步: SOUL.md
+[2026-03-20 00:00:01] 已同步: TOOLS.md
+[2026-03-20 00:00:01] 已同步: USER.md
+[2026-03-20 00:00:01] 已同步: memory/*.md
+[2026-03-20 00:00:01] 同步完成
+[2026-03-20 00:00:01] 检测到未提交的修改，开始提交...
