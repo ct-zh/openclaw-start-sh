@@ -8,6 +8,15 @@
 
 详情见 `memory/2026-03-11.md`。
 
+## Web 页面托管规则
+
+**所有网页必须使用 8888 端口，通过 Docker Nginx 容器对外访问。**
+
+- 容器名称：`nginx-8888`
+- 访问方式：`http://<公网IP>:8888/<文件名>`
+- 文件复制：`docker cp <本地文件> nginx-8888:/usr/share/nginx/html/<文件名>`
+- **禁止**：擅自使用其他端口（如 Python http.server）
+
 ## 代理使用规则
 - **除非用户特别说明，否则不要开启代理**
 - Mihomo 已安装：`~/bin/mihomo`
