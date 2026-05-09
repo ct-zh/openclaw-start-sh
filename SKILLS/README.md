@@ -36,3 +36,14 @@
 ## 法律免责与合规 (Legal & Compliance)
 
 本项目中引用的第三方 Skills 均遵循其各自的开源许可证。如果您对这些技能进行修改或再分发，请务必遵守相关许可证（如 Apache 2.0 或 MIT）的规定，包括但不限于保留版权声明、许可证副本以及在必要时说明修改内容。
+
+
+### skill推荐
+
+- https://github.com/obra/superpowers  superpowers一套行之有效的智能自主能力框架与软件开发方法论；工程级，token完全够花的情况下可以尝试，会大幅增加token消耗
+
+
+- RTK + Caveman
+    - 与上面的superpower不同，这两个是专注于节约token的hook
+    - https://github.com/rtk-ai/rtk/blob/develop/README_zh.md
+    - https://github.com/JuliusBrussee/caveman
