@@ -244,3 +244,5 @@ caveman 压缩模型输出，不处理用户输入，中文提问不受影响。
 ```bash
 claude plugin uninstall caveman@caveman
 ```
+
+## 
