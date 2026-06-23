@@ -1,0 +1,4 @@
+interface:
+  display_name: "UX Refactor Pro"
+  short_description: "Redesign complex existing Web UI"
+  default_prompt: "Use $ux-refactor-pro to redesign this existing Web UI into two A/B static HTML prototype directions."
