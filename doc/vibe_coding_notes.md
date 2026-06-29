@@ -1,3 +1,18 @@
+# vibe coding notes
+
+## codex 自定义宠物
+
+https://petdex.crafter.run/zh
+
+## Vibe Coding 两个核心 Prompt 技巧
+
+- “从第一性原理出发”： 可引导 AI 跳出类比推理惯性，回归问题底层逻辑推导，从根源解决问题，避免表层修补；
+
+- “对抗式审查”： 让 AI 以攻防视角全面排查系统隐患，提前规避线上故障。
+
+二者形成 “生成 - 验证” 闭环，且其思路可延伸至文案、商业决策等更多场景。
+
+
 ## Claude Code 状态栏配置
 
 ### 配置说明
@@ -59,6 +74,9 @@ chmod +x ~/.claude/scripts/context-bar.sh
 - 脚本输出会每隔几秒刷新一次，保持脚本执行速度快（避免耗时操作）
 
 ---
+
+
+
 
 ## GitHub 仓库信息获取
 
@@ -125,6 +143,8 @@ gh pr view 42 -R owner/repo
 # 查看 PR 评论
 gh api repos/owner/repo/pulls/42/comments
 ```
+
+
 
 
 
@@ -244,5 +264,3 @@ caveman 压缩模型输出，不处理用户输入，中文提问不受影响。
 ```bash
 claude plugin uninstall caveman@caveman
 ```
-
-## 
