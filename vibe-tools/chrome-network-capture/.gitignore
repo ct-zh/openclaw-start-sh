@@ -1,0 +1,4 @@
+# Captured raw requests and responses must remain local.
+captures/
+*.har
+*.jsonl

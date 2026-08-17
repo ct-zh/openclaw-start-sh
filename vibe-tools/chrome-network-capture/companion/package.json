@@ -1,0 +1,15 @@
+{
+  "name": "chrome-network-capture-companion",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Local collector and MCP bridge for Chrome network capture.",
+  "scripts": {
+    "start": "node server.js",
+    "mcp": "node mcp.js",
+    "test": "node --test test/server.test.js"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}
