@@ -11,6 +11,8 @@ const maxBodyBytes = Number(process.env.NETWORK_CAPTURE_MAX_BODY_BYTES || 2 * 10
 const toolDirectory = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const storageDirectory = process.env.NETWORK_CAPTURE_STORAGE_DIR || resolve(toolDirectory, 'captures');
 const store = new CaptureStore({ maxEvents, maxBodyBytes, storageDirectory });
+const instanceId = crypto.randomUUID();
+const startedAt = new Date().toISOString();
 const commands = [];
 const commandResults = new Map();
 
@@ -22,7 +24,7 @@ function enqueueLogSearch(body) {
 
 function sendJson(response, status, body) {
   response.writeHead(status, { 'content-type': 'application/json; charset=utf-8' });
-  response.end(JSON.stringify(body));
+  response.end(JSON.stringify({ instanceId, startedAt, ...body }));
 }
 
 async function readJson(request) {

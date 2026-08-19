@@ -51,10 +51,10 @@ NETWORK_CAPTURE_MAX_EVENTS=500 NETWORK_CAPTURE_MAX_BODY_BYTES=1048576 npm start
 
 提供的工具：
 
-- `network_capture_status`：本地服务和采集会话状态。
+- `network_capture_status`：本地服务实例标识、启动时间和采集会话状态。
 - `network_capture_list`：请求轻量索引，支持 URL、方法、状态、MIME 类型及完成时间范围过滤；`from`、`to` 为 Unix 毫秒时间戳。
 - `network_capture_get`：按 ID 读取所需部分；仅显式请求时才返回 headers 或 body。
-- `network_capture_clear`：清除本机内存缓存。
+- `network_capture_clear`：清除本机内存和持久化数据。
 - `log_search_run`：将日志查询排队，扩展会在唯一已开始采集的标签页中使用当前浏览器登录态执行。
 - `log_search_result`：按命令 ID 读取查询结果。
 
