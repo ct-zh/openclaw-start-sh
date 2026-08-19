@@ -77,6 +77,8 @@ const server = http.createServer(async (request, response) => {
         method: url.searchParams.get('method') || undefined,
         status: url.searchParams.get('status') || undefined,
         mimeType: url.searchParams.get('mimeType') || undefined,
+        from: url.searchParams.get('from') || undefined,
+        to: url.searchParams.get('to') || undefined,
       }));
     }
 

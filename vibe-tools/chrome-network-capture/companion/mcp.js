@@ -44,6 +44,8 @@ const tools = [
         method: { type: 'string', description: 'HTTP method, for example GET or POST.' },
         status: { type: 'number', description: 'HTTP status code.' },
         mimeType: { type: 'string', description: 'Response MIME type substring.' },
+        from: { type: 'number', description: 'Only requests completed at or after this Unix millisecond timestamp.' },
+        to: { type: 'number', description: 'Only requests completed at or before this Unix millisecond timestamp.' },
       },
     },
   },
@@ -111,7 +113,7 @@ async function handle(message) {
     if (params.name === 'network_capture_status') data = await request('/health');
     else if (params.name === 'network_capture_list') {
       const query = new URLSearchParams();
-      for (const key of ['limit', 'offset', 'urlIncludes', 'method', 'status', 'mimeType']) {
+      for (const key of ['limit', 'offset', 'urlIncludes', 'method', 'status', 'mimeType', 'from', 'to']) {
         if (params.arguments?.[key] !== undefined) query.set(key, String(params.arguments[key]));
       }
       data = await request(`/captures?${query}`);

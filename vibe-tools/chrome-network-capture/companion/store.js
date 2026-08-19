@@ -134,15 +134,25 @@ export class CaptureStore {
     };
   }
 
-  list({ limit = 50, offset = 0, urlIncludes, method, status, mimeType } = {}) {
+  list({ limit = 50, offset = 0, urlIncludes, method, status, mimeType, from, to } = {}) {
     const normalizedLimit = Math.min(Math.max(Number(limit) || 50, 1), 200);
     const normalizedOffset = Math.max(Number(offset) || 0, 0);
+    const normalizedFrom = from === undefined ? undefined : Number(from);
+    const normalizedTo = to === undefined ? undefined : Number(to);
+    if (normalizedFrom !== undefined && !Number.isFinite(normalizedFrom)) throw new Error('from must be a Unix millisecond timestamp.');
+    if (normalizedTo !== undefined && !Number.isFinite(normalizedTo)) throw new Error('to must be a Unix millisecond timestamp.');
+    if (normalizedFrom !== undefined && normalizedTo !== undefined && normalizedFrom > normalizedTo) {
+      throw new Error('from must be less than or equal to to.');
+    }
+
     let items = this.events.filter((event) => event.id);
 
     if (urlIncludes) items = items.filter((event) => event.url.includes(urlIncludes));
     if (method) items = items.filter((event) => event.method === method);
     if (status !== undefined) items = items.filter((event) => event.status === Number(status));
     if (mimeType) items = items.filter((event) => (event.mimeType || '').includes(mimeType));
+    if (normalizedFrom !== undefined) items = items.filter((event) => Date.parse(event.completedAt || event.startedAt) >= normalizedFrom);
+    if (normalizedTo !== undefined) items = items.filter((event) => Date.parse(event.completedAt || event.startedAt) <= normalizedTo);
 
     items = items.slice().reverse();
     const total = items.length;
